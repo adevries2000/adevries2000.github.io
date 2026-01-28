@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools - Albert De Vries</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            background-color: #ffffff;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        header h1 a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        header h1 a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        nav li {
+            display: inline;
+        }
+
+        nav a {
+            color: #0366d6;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav li:not(:last-child)::after {
+            content: " •";
+            color: #24292e;
+            margin-left: 10px;
+        }
+
+        main {
+            margin-top: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #24292e;
+        }
+
+        .search-box {
+            margin-bottom: 30px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #d1d5da;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #0366d6;
+            box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.1);
+        }
+
+        .tool-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+
+        .tool-section:last-child {
+            border-bottom: none;
+        }
+
+        .tool-section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #24292e;
+        }
+
+        .tool-section p {
+            color: #586069;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .tool-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .tool-section li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #586069;
+        }
+
+        .tool-section strong {
+            color: #24292e;
+            font-weight: 600;
+        }
+
+        .tool-section a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        .tool-section a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px 20px;
+            color: #586069;
+            font-size: 12px;
+            margin-top: 60px;
+            border-top: 1px solid #e1e4e8;
+        }
+
+        .no-results {
+            text-align: center;
+            color: #586069;
+            padding: 40px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            nav li:not(:last-child)::after {
+                content: "";
+                margin-left: 0;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Albert De Vries</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biography.html">Biography</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="presentations.html">Presentations</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Tools</h1>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search tools...">
+        </div>
+
+        <div id="toolsContainer">
+
+            <!-- Tool 1: Semen Value Calculator -->
+            <div class="tool-section" data-search="semen value calculator genetic merit npv selection index">
+                <h2>Semen Value Calculator</h2>
+                <p>Calculate the net present value of +$100 in selection index</p>
+                <ul>
+                    <li><strong>Spreadsheet:</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=92b96773ee20d640bedc3044c14d515efe1ad1ef" target="_blank">Semen Value Spreadsheet</a></li>
+                    <li><strong>Documentation:</strong> <a href="http://edis.ifas.ufl.edu/an338" target="_blank">Economic Value of Genetic Merit of Dairy Semen</a></li>
+                </ul>
+            </div>
+
+            <!-- Tool 2: DairyVIP -->
+            <div class="tool-section" data-search="dairyvip herd management prices consequences evaluation dynamic programming">
+                <h2>DairyVIP (Install on Computer)</h2>
+                <p>Evaluation of consequences of changes in herd management and prices on dairy farms. This program has monthly time steps, seasonality, and dynamic programming.</p>
+                <p><em>Save the .exe and .xlsm files in the same directory and enable macros.</em></p>
+                <ul>
+                    <li><strong>Version 1.1 (2007):</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=419a4746959e202ece90dc16d3444612b912c8e0" target="_blank">dairyVIP1.1.exe</a> and <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=b06083b2141eb93bd46725485ad4a86e2c080b4a" target="_blank">DairyVIP1.1.xls</a></li>
+                    <li><strong>Version 1.4 (2012):</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=2728f3c54f938add8886c7aed498d16edc31465e" target="_blank">dairyvip1.4.exe</a> and <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=ac45b754a930b1528ce9d2c293dbf93303d76491" target="_blank">DairyVIP1.4.xlsm</a></li>
+                    <li><strong>Version 2.1 (2015):</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=125ea9f6e216f7cf722108b44e0bb582c9ca4ead" target="_blank">dairyvip21.exe</a> and <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=18cda694d0fc45ad8b07ceb0f06fcd3b2ceac1f7" target="_blank">DairyVIP21.xlsm</a></li>
+                    <li><strong>Documentation:</strong> <a href="http://edis.ifas.ufl.edu/AN177" target="_blank">The DairyVIP Program</a></li>
+                </ul>
+            </div>
+
+            <!-- Tool 3: Capital Budget -->
+            <div class="tool-section" data-search="capital budget facility investment dairy construction">
+                <h2>Capital Budget</h2>
+                <p>Set up a capital budget for a new dairy facility.</p>
+                <ul>
+                    <li><strong>Spreadsheet:</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=773d514043d21160308d0d20da0dd7fc84d93cb8" target="_blank">CapitalBudget.xls</a></li>
+                    <li><strong>Documentation:</strong> <a href="http://edis.ifas.ufl.edu/DS138" target="_blank">Capital Budgeting for a New Dairy Facility</a></li>
+                </ul>
+            </div>
+
+            <!-- Tool 4: DairyVIP Online -->
+            <div class="tool-section" data-search="dairyvip online herd management evaluation web">
+                <h2>DairyVIP (Online)</h2>
+                <p>Evaluation of consequences of changes in herd management and prices on dairy farms.</p>
+                <p>Contact Dr. Albert De Vries at <a href="mailto:devries@ufl.edu">devries@ufl.edu</a></p>
+            </div>
+
+            <!-- Tool 5: Stall Stocking Density Calculator -->
+            <div class="tool-section" data-search="stall stocking density calculator metamodel economic">
+                <h2>Stall Stocking Density Calculator</h2>
+                <p>Metamodel of economic evaluation of stall stocking density. Journal of Dairy Science. 99:3848–3857</p>
+                <ul>
+                    <li><strong>Spreadsheet:</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=efe583789f38822815cc6db8244660d4148abb00" target="_blank">Metamodel Spreadsheet (lbs)</a></li>
+                    <li><strong>Documentation:</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=a85bd905ad4520bce5263c41ef986e867a967386" target="_blank">JDS</a> | <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=fd8bb82786f4e7f3d4e8ace7c910d8ca595cad77" target="_blank">WCDS</a> | <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=96e2a2cac693825b62d543b66684ccdf2e9873c1" target="_blank">PD</a></li>
+                </ul>
+            </div>
+
+            <!-- Tool 6: v.Calculator14 -->
+            <div class="tool-section" data-search="vcalculator excel macro herd management evaluation spreadsheet">
+                <h2>v.Calculator14 (Excel Macro)</h2>
+                <p>Spreadsheet to evaluate consequences of changes in herd management and prices on dairy farms. Enable macros.</p>
+                <ul>
+                    <li><strong>Spreadsheet:</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=add0680e71f8695a447118327c58a577588d37ba" target="_blank">v.Calculator14</a></li>
+                    <li>Documentation forthcoming. Contact Albert De Vries at <a href="mailto:devries@ufl.edu">devries@ufl.edu</a></li>
+                </ul>
+            </div>
+
+            <!-- Tool 7: Mailbox Price Forecast Tool -->
+            <div class="tool-section" data-search="mailbox price forecast milk florida federal order">
+                <h2>Mailbox Price Forecast Tool</h2>
+                <p>Forecast your farm mailbox milk price with this tool from the University of Wisconsin. The tool has been populated with Florida Federal Order mailbox prices.</p>
+                <ul>
+                    <li><strong>Spreadsheet:</strong> <a href="/media/animalifasufledu/dairy-website/pdf/tools/Mailbox-Forecast-Tool.xlsm" target="_blank">Mailbox Forecast Tool (.XLSM - enable macros)</a></li>
+                    <li><strong>Documentation:</strong> <a href="/media/animalifasufledu/dairy-website/pdf/tools/Mailbox-Forecast-Tool-Users-Manual.pdf" target="_blank">User's Manual</a></li>
+                </ul>
+            </div>
+
+            <!-- Tool 8: Digesters -->
+            <div class="tool-section" data-search="digester anaerobic manure economic feasibility biogas">
+                <h2>Digesters</h2>
+                <p>Calculate the economic feasibility of anaerobic manure digesters on Florida dairy farms.</p>
+                <ul>
+                    <li><strong>Spreadsheet:</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=b8dc25689b70da11c5694c827d18bd4b7fd06660" target="_blank">Digester1.1</a></li>
+                    <li><strong>Documentation:</strong> <a href="http://edis.ifas.ufl.edu/AN176" target="_blank">Using the Digester Spreadsheet</a></li>
+                </ul>
+            </div>
+
+            <!-- Tool 9: Heifer Value -->
+            <div class="tool-section" data-search="heifer value replacement cost economics worth">
+                <h2>Heifer Value</h2>
+                <p>Calculate how much you can afford to pay for heifers.</p>
+                <ul>
+                    <li><strong>Spreadsheet:</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=98c26c8cdaa2163eafbfe51b4afb1778a4ab6067" target="_blank">heifervalue.xls</a></li>
+                    <li><strong>Documentation:</strong> <a href="http://edis.ifas.ufl.edu/DS176" target="_blank">What Is the Maximum Worth of a Dairy Heifer?</a></li>
+                </ul>
+            </div>
+
+            <!-- Tool 10: Nitrogen Leaching -->
+            <div class="tool-section" data-search="nitrogen leaching environmental nutrients manure">
+                <h2>Nitrogen Leaching</h2>
+                <p>Estimating nitrogen leaching.</p>
+                <ul>
+                    <li><strong>Spreadsheet:</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=efdd2ef0a70b81a846236b3e98264e258fee7170" target="_blank">DNFDFM.xls</a></li>
+                </ul>
+            </div>
+
+            <!-- Tool 11: Nutrient Budgeting -->
+            <div class="tool-section" data-search="nutrient budgeting manure management phosphorus nitrogen">
+                <h2>Nutrient Budgeting</h2>
+                <p>Manage dairy manure accountably with worksheets for nutrient budgeting.</p>
+                <ul>
+                    <li><strong>Spreadsheet:</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=9146b7043c98311a92c7ab150ca7d72f2f3083a8" target="_blank">Circular_1196_Revised.xls</a></li>
+                    <li><strong>Documentation:</strong> <a href="http://edis.ifas.ufl.edu/DS168" target="_blank">Managing Dairy Manure Accountably</a></li>
+                </ul>
+            </div>
+
+            <!-- Tool 12: Weighted Cost of Capital -->
+            <div class="tool-section" data-search="weighted cost capital wacc financial analysis investment">
+                <h2>Weighted Cost of Capital</h2>
+                <p>Calculate the weighted cost of capital on Florida dairy farms.</p>
+                <ul>
+                    <li><strong>Presentation:</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=4c2b91b5b40efce0e6f158151fc7b27c15a59fb4" target="_blank">WACCIIwithlogos.ppt</a></li>
+                    <li><strong>Documentation:</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=d7e8c7c85a6333b28cdd550bf9d4eed7f7e821ed" target="_blank">WACC Paper (PDF)</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            No tools found matching your search.
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Albert De Vries
+    </footer>
+
+    <script>
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const toolsContainer = document.getElementById('toolsContainer');
+        const noResults = document.getElementById('noResults');
+        const toolSections = document.querySelectorAll('.tool-section');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            let visibleCount = 0;
+
+            toolSections.forEach(section => {
+                const searchText = section.getAttribute('data-search').toLowerCase();
+                const titleText = section.querySelector('h2').textContent.toLowerCase();
+                const descText = Array.from(section.querySelectorAll('p')).map(p => p.textContent).join(' ').toLowerCase();
+                const allText = searchText + ' ' + titleText + ' ' + descText;
+
+                if (searchTerm === '' || allText.includes(searchTerm)) {
+                    section.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+
+            if (visibleCount === 0 && searchTerm !== '') {
+                noResults.style.display = 'block';
+                toolsContainer.style.display = 'none';
+            } else {
+                noResults.style.display = 'none';
+                toolsContainer.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
