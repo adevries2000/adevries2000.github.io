@@ -57,7 +57,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 70px;
+            min-height: 70px;
         }
 
         nav .logo {
@@ -73,6 +73,7 @@
             display: flex;
             list-style: none;
             gap: 2rem;
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -221,9 +222,20 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            nav ul {
+            nav .container {
+                padding: 1rem;
+                flex-direction: column;
+                align-items: flex-start;
                 gap: 1rem;
-                font-size: 0.85rem;
+            }
+
+            nav ul {
+                gap: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                margin-top: 120px;
             }
 
             .hero h1 {
@@ -245,20 +257,21 @@
 
         @media (max-width: 480px) {
             nav .container {
-                flex-direction: column;
-                height: auto;
-                padding: 1rem;
+                padding: 0.8rem 1rem;
+            }
+
+            nav .logo {
+                font-size: 1.1rem;
             }
 
             nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
                 gap: 0.5rem 1rem;
-                margin-top: 0.5rem;
+                font-size: 0.85rem;
             }
 
             .hero {
                 padding: 3rem 1.5rem;
+                margin-top: 140px;
             }
 
             .hero h1 {
@@ -274,12 +287,12 @@
 <body>
     <nav>
         <div class="container">
-            <a href="#" class="logo">Albert De Vries</a>
+            <a href="index.html" class="logo">Albert De Vries</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="biography.html">Biography</a></li>
                 <li><a href="publications.html">Publications</a></li>
-                <li><a href="presentations.html">Publications</a></li>
+                <li><a href="presentations.html">Presentations</a></li>
                 <li><a href="tools.html">Tools</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -295,7 +308,7 @@
                 Department of Animal Sciences<br>
                 University of Florida<br>
                 2250 Shealy Drive<br>
-                Gainesville, FL 32608
+                Gainesville, FL 32608<br>
                 USA
             </div>
         </div>
