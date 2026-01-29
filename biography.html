@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biography - Albert De Vries</title>
+    <title>Albert De Vries</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
@@ -33,6 +33,7 @@
             background-color: #ffffff;
             padding: 0;
             margin: 0;
+            overflow-y: scroll;
         }
 
         h1, h2, h3 {
@@ -127,25 +128,61 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 600;
             margin-bottom: 1.875rem;
             color: #24292e;
         }
 
-        .bio-content {
-            margin-top: 1.25rem;
+        .section {
+            margin-bottom: 1.563rem;
+            padding-bottom: 0;
         }
 
-        .bio-content p {
-            margin-bottom: 1.5rem;
-            color: #586069;
-            font-size: 1.125rem;
-            line-height: 1.6;
-        }
-
-        .bio-content p:last-child {
+        .section:last-child {
             margin-bottom: 0;
+        }
+
+        .section.with-photo {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.875rem;
+        }
+
+        .section.with-photo .section-text {
+            flex: 1;
+        }
+
+        .profile-photo {
+            width: 250px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #24292e;
+        }
+
+        .section p {
+            color: #586069;
+            margin-bottom: 0.625rem;
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section strong {
+            color: #24292e;
+            font-weight: 600;
         }
 
         /* Footer */
@@ -165,6 +202,15 @@
                 margin-top: 120px;
             }
 
+            .section.with-photo {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile-photo {
+                width: 200px;
+            }
+
             nav .container {
                 padding: 1rem;
                 flex-direction: column;
@@ -178,13 +224,25 @@
             }
 
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.75rem;
+            }
+
+            .section h2 {
+                font-size: 1.25rem;
+            }
+
+            .section p {
+                font-size: 0.938rem;
             }
         }
 
         @media (max-width: 480px) {
             .content-wrapper {
                 margin-top: 140px;
+            }
+
+            .profile-photo {
+                width: 150px;
             }
 
             nav .container {
@@ -203,6 +261,10 @@
             h1 {
                 font-size: 1.5rem;
             }
+
+            .section h2 {
+                font-size: 1.125rem;
+            }
         }
     </style>
 </head>
@@ -211,8 +273,8 @@
         <div class="container">
             <a href="index.html" class="logo">Albert De Vries</a>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="biography.html" class="active">Biography</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="biography.html">Biography</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="presentations.html">Presentations</a></li>
                 <li><a href="tools.html">Tools</a></li>
@@ -223,15 +285,40 @@
 
     <div class="content-wrapper">
         <main>
-            <h1>Biography</h1>
+            <h1>Albert De Vries</h1>
 
-            <div class="bio-content">
-                <p>Albert De Vries is a professor in the Department of Animal Sciences at the University of Florida, USA. He teaches undergraduate courses in dairy science, 
-                    works with dairy farmers and the allied dairy industry in his Extension role, and conducts research related to dairy systems management and economics. 
-                    His interests are in dairy cattle replacement strategies, reproduction and genetics, and precision dairy farming. He is also actively involved with the UF\IFAS Dairy Unit which milks 400 cows. 
-                    Albert De Vries grew up on a mixed dairy, poultry, and pig farm in the Netherlands. He graduated from Wageningen University with a B.S and M.S. degree in animal science with a minor in 
-                    agricultural economics. He received a Ph.D. in animal sciences from the University of Minnesota in St. Paul. He lives in Newberry, Florida, with wife Kim and four cats.</p>
-            </div>
+            <section class="section with-photo">
+                <div class="section-text">
+                    <p>I am a professor in the Department of Animal Sciences at the University of Florida. My work focuses on dairy herd management science, combining research, extension, and teaching to improve dairy farm operations through data-driven decision making and optimization techniques.</p>
+                </div>
+                <img src="De_Vries_cropped.png" alt="Albert De Vries" class="profile-photo">
+            </section>
+
+            <section class="section">
+                <h2>Research</h2>
+                <p>In research my students and I hope to make a contribution to dairy herd management science. This field tries to improve dairy farm management by valuing different decision alternatives and information under herd constraints, such as when to replace cows, reproductive management decisions, and the use of genomic testing.</p>
+                
+                <p>We typically use simulation modeling or optimization, such as dynamic programming, linear programming, Markov chains, and Monte Carlo simulation. Excel is a favorite platform, but we also use SAS, C++ and JAVA. Another part of our research effort is analysis of large data sets to quantify the performance of dairy cows and herds, for example risk factors for culling, reproductive success, and seasonality of production. These results are often useful inputs in the modeling work.</p>
+            </section>
+
+            <section class="section">
+                <h2>Teaching</h2>
+                <p>I teach ANS 3250L Dairy Cattle Practicum and ANS 3251 Biology and Management of Dairy Cattle. ANS 3251 is a survey course with dual focus on biology and implications for management. ANS 3250L is a practicum course that deepens the knowledge gained in ANS 3251. These courses are popular with students who want to learn more about dairy farming, but not necessarily want to make a career out of it.</p>
+                
+                <p>I am also an academic adviser to undergraduate students with an interest in dairy science. And I am involved with teaching a short course in advanced herd dynamics at the US Dairy Training and Education Consortium in Clovis, New Mexico.</p>
+            </section>
+
+            <section class="section">
+                <h2>Extension</h2>
+                <p>My extension efforts mostly follow directly from my research efforts. I write and teach about valuing decision alternatives on dairy farms, with a focus on cattle replacement, reproduction, and genetics. Part of the effort is also making decision support aids available to the public. We work with dairy farmers and the allied industry. In return, the Extension work allows us to focus on questions that are important to the dairy industry in our research program.</p>
+                
+                <p>I also maintain the dairy Extension email listserv, and I edit the quarterly Dairy Update newsletter. All can be found at <strong>https://animal.ifas.ufl.edu/dairy/</strong>.</p>
+            </section>
+
+            <section class="section">
+                <h2>Consulting</h2>
+                <p>I am also available for consulting.</p>
+            </section>
         </main>
 
         <footer>
