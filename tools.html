@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tools - Albert De Vries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,45 +19,46 @@
             line-height: 1.6;
             color: #24292e;
             background-color: #ffffff;
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
+            padding: 0;
+            margin: 0;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e1e4e8;
-        }
-
-        header h1 {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        header h1 a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-
-        header h1 a:hover {
-            text-decoration: underline;
-        }
-
+        /* Navigation - matching index.html */
         nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5ddd5;
+            z-index: 1000;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 5px;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 70px;
+        }
+
+        nav .logo {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a4d2e;
+            text-decoration: none;
+            letter-spacing: -0.5px;
         }
 
         nav ul {
-            list-style: none;
             display: flex;
+            list-style: none;
+            gap: 2rem;
             flex-wrap: wrap;
-            gap: 5px;
         }
 
         nav li {
@@ -62,23 +66,44 @@
         }
 
         nav a {
-            color: #0366d6;
+            color: #2c3e50;
             text-decoration: none;
-            padding: 5px 10px;
+            font-weight: 400;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #c17817;
         }
 
-        nav li:not(:last-child)::after {
-            content: " •";
-            color: #24292e;
-            margin-left: 10px;
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #c17817;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Main content wrapper */
+        .content-wrapper {
+            margin-top: 70px;
+            padding: 20px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         main {
-            margin-top: 40px;
+            margin-top: 0;
         }
 
         h1 {
@@ -173,36 +198,47 @@
         }
 
         @media (max-width: 768px) {
-            body {
+            .content-wrapper {
                 padding: 15px;
             }
 
-            nav {
+            nav .container {
+                padding: 1rem;
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-start;
+                gap: 1rem;
             }
 
             nav ul {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            nav li:not(:last-child)::after {
-                content: "";
-                margin-left: 0;
+                gap: 0.8rem 1.5rem;
+                font-size: 0.9rem;
             }
 
             h1 {
                 font-size: 24px;
             }
         }
+
+        @media (max-width: 480px) {
+            nav .container {
+                padding: 0.8rem 1rem;
+            }
+
+            nav .logo {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                gap: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">Albert De Vries</a></h1>
-        <nav>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Albert De Vries</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="biography.html">Biography</a></li>
@@ -211,8 +247,10 @@
                 <li><a href="tools.html">Tools</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
 
     <main>
         <h1>Tools</h1>
@@ -260,7 +298,7 @@
             <div class="tool-section" data-search="dairyvip online herd management evaluation web">
                 <h2>DairyVIP (Online)</h2>
                 <p>Evaluation of consequences of changes in herd management and prices on dairy farms.</p>
-                <p>Contact Dr. Albert De Vries at <a href="mailto:devries@ufl.edu">devries@ufl.edu</a></p>
+                <p>Contact Dr. Albert De Vries at <a href="/cdn-cgi/l/email-protection#36525340445f53457643505a18535243"><span class="__cf_email__" data-cfemail="e7838291958e8294a792818bc9828392">[email&#160;protected]</span></a></p>
             </div>
 
             <!-- Tool 5: Stall Stocking Density Calculator -->
@@ -279,7 +317,7 @@
                 <p>Spreadsheet to evaluate consequences of changes in herd management and prices on dairy farms. Enable macros.</p>
                 <ul>
                     <li><strong>Spreadsheet:</strong> <a href="https://wcm.it.ufl.edu/t4/SiteManager?ctfn=download&fnno=60&ceid=add0680e71f8695a447118327c58a577588d37ba" target="_blank">v.Calculator14</a></li>
-                    <li>Documentation forthcoming. Contact Albert De Vries at <a href="mailto:devries@ufl.edu">devries@ufl.edu</a></li>
+                    <li>Documentation forthcoming. Contact Albert De Vries at <a href="/cdn-cgi/l/email-protection#cbafaebdb9a2aeb88bbeada7e5aeafbe"><span class="__cf_email__" data-cfemail="57333221253e32241722313b79323322">[email&#160;protected]</span></a></li>
                 </ul>
             </div>
 
@@ -351,8 +389,9 @@
     <footer>
         © 2026 Albert De Vries
     </footer>
+    </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Search functionality
         const searchInput = document.getElementById('searchInput');
         const toolsContainer = document.getElementById('toolsContainer');
@@ -375,16 +414,3 @@
                 } else {
                     section.style.display = 'none';
                 }
-            });
-
-            if (visibleCount === 0 && searchTerm !== '') {
-                noResults.style.display = 'block';
-                toolsContainer.style.display = 'none';
-            } else {
-                noResults.style.display = 'none';
-                toolsContainer.style.display = 'block';
-            }
-        });
-    </script>
-</body>
-</html>
