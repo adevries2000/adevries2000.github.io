@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications Reference List</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .reference {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            text-indent: -30px;
+            font-size: 16px;
+        }
+        .reference a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .reference a:hover {
+            text-decoration: underline;
+        }
+        .info {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Publications Reference List</h1>
+        
+        <div class="info">
+            <strong>Note:</strong> References are formatted in Harvard style and sorted alphabetically by author.
+            Click the <strong>[PDF]</strong> link to view the full publication.
+        </div>
+        
+        <input type="text" id="searchBox" placeholder="Search references by author, year, or title..." 
+               style="width: 100%; padding: 12px; margin-bottom: 25px; font-size: 16px; border: 2px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+        
+        <div class="references" id="referenceList">
+            <!-- REFERENCE TEMPLATE - Copy and modify for each publication
+            
+            Harvard Format: Author(s) (Year) Title. Journal/Source, Volume(Issue), Pages.
+            
+            <div class="reference">Author, A. (2019) <em>Title of the publication</em>. Journal Name, 10(2), pp. 123-456. [<a href="https://raw.githubusercontent.com/adevries2000/adevries2000.github.io/main/pubs/filename.pdf" target="_blank">PDF</a>]</div>
+            
+            For multiple authors use:
+            - Two authors: Author, A. and Author, B.
+            - Three+ authors: Author, A. et al.
+            -->
+            
+            <!-- Example references based on your filenames -->
+            
+            <div class="reference">Bonney-King, M. (2019) <em>Study title here</em>. [<a href="https://raw.githubusercontent.com/adevries2000/adevries2000.github.io/main/pubs/2019%20Bonney-King.pdf" target="_blank">PDF</a>]</div>
+            
+            <div class="reference">Cabrera, V.E. et al. (2025) <em>Data integration in animals</em>. Animals, 15(329). [<a href="https://raw.githubusercontent.com/adevries2000/adevries2000.github.io/main/pubs/Cabrera%202025%20-%20data%20integration%20-%20animals-15-00329.pdf" target="_blank">PDF</a>]</div>
+            
+            <div class="reference">Chebel, R.C. (2025) <em>Targeted reproduction management</em>. [<a href="https://raw.githubusercontent.com/adevries2000/adevries2000.github.io/main/pubs/Chebel%202025%20-%20Targeted%20reproduction%20management.pdf" target="_blank">PDF</a>]</div>
+            
+            <div class="reference">De Vries, A. (n.d.) <em>Publication title</em>. [<a href="https://raw.githubusercontent.com/adevries2000/adevries2000.github.io/main/pubs/2421%20De%20Vries.pdf" target="_blank">PDF</a>]</div>
+            
+            <div class="reference">DRMS (n.d.) <em>Introduces FreshFocus feature</em>. [<a href="https://raw.githubusercontent.com/adevries2000/adevries2000.github.io/main/pubs/DRMS%20Introduces%20FreshFocus%20Feature.pdf" target="_blank">PDF</a>]</div>
+            
+            <div class="reference">Heins, B.J. (n.d.) <em>Publication title</em>. [<a href="https://raw.githubusercontent.com/adevries2000/adevries2000.github.io/main/pubs/2682%20Heins.pdf" target="_blank">PDF</a>]</div>
+            
+            <div class="reference">Ojeda-Rojas, O.A. (n.d.) <em>Publication title</em>. [<a href="https://raw.githubusercontent.com/adevries2000/adevries2000.github.io/main/pubs/2435%20Ojeda-Rojas.pdf" target="_blank">PDF</a>]</div>
+            
+            <div class="reference">Pinedo, P. (n.d.) <em>Publication title</em>. [<a href="https://raw.githubusercontent.com/adevries2000/adevries2000.github.io/main/pubs/2338%20Pinedo.pdf" target="_blank">PDF</a>]</div>
+            
+            <div class="reference">The Bullvine (n.d.) <em>EXPOSED: The $90,000 genetics scam farmers aren't talking about</em>. [<a href="https://raw.githubusercontent.com/adevries2000/adevries2000.github.io/main/pubs/Bullvine%20-%20EXPOSED_%20The%20%2490%2C000%20Genetics%20Scam%20Farmers%20Aren%27t%20Talking%20About.pdf" target="_blank">PDF</a>]</div>
+            
+        </div>
+        
+        <div class="footer">
+            <p>Last updated: January 29, 2026</p>
+            <p><a href="https://github.com/adevries2000/adevries2000.github.io/tree/main/pubs" style="color: #3498db;">View all PDFs on GitHub</a></p>
+        </div>
+    </div>
+    
+    <script>
+        // Search functionality
+        document.getElementById('searchBox').addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            const references = document.getElementsByClassName('reference');
+            let visibleCount = 0;
+            
+            for (let ref of references) {
+                const text = ref.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    ref.style.display = '';
+                    visibleCount++;
+                } else {
+                    ref.style.display = 'none';
+                }
+            }
+            
+            // Update count if needed
+            if (this.value && visibleCount === 0) {
+                console.log('No references found');
+            }
+        });
+    </script>
+</body>
+</html>
