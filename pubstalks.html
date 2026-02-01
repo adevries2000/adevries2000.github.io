@@ -165,6 +165,56 @@
             border-top: 1px solid #e1e4e8;
         }
 
+        /* Profile Links */
+        .profile-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.25rem;
+        }
+
+        .profile-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #24292e;
+            transition: all 0.2s ease;
+        }
+
+        .profile-link:hover {
+            border-color: #1a4d2e;
+            background-color: #f6f8fa;
+            transform: translateX(4px);
+        }
+
+        .profile-link img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .profile-link-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .profile-link-title {
+            font-weight: 600;
+            color: #24292e;
+            font-size: 1rem;
+        }
+
+        .profile-link-url {
+            font-size: 0.875rem;
+            color: #586069;
+            word-break: break-all;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .content-wrapper {
@@ -232,11 +282,31 @@
             <h1>Publications and Presentations</h1>
 
             <div class="bio-content">
-                <p>Albert De Vries is a professor in the Department of Animal Sciences at the University of Florida, USA. He teaches undergraduate courses in dairy science, 
-                    works with dairy farmers and the allied dairy industry in his Extension role, and conducts research related to dairy systems management and economics. 
-                    His interests are in dairy cattle replacement strategies, reproduction and genetics, and precision dairy farming. He is also actively involved with the UF\IFAS Dairy Unit which milks 400 cows. 
-                    Albert De Vries grew up on a mixed dairy, poultry, and pig farm in the Netherlands. He graduated from Wageningen University with a B.S and M.S. degree in animal science with a minor in 
-                    agricultural economics. He received a Ph.D. in animal sciences from the University of Minnesota in St. Paul. He lives in Newberry, Florida, with wife Kim and four cats.</p>
+                <div class="profile-links">
+                    <a href="https://scholar.google.com/citations?user=OfKvIdIAAAAJ&hl=en" target="_blank" class="profile-link">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar">
+                        <div class="profile-link-content">
+                            <span class="profile-link-title">Google Scholar</span>
+                            <span class="profile-link-url">View publications and citations</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://orcid.org/0000-0003-4511-0388" target="_blank" class="profile-link">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID">
+                        <div class="profile-link-content">
+                            <span class="profile-link-title">ORCID</span>
+                            <span class="profile-link-url">0000-0003-4511-0388</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.researchgate.net/profile/Albert-De-Vries-2/publications" target="_blank" class="profile-link">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate">
+                        <div class="profile-link-content">
+                            <span class="profile-link-title">ResearchGate</span>
+                            <span class="profile-link-url">View research profile and publications</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </main>
 
