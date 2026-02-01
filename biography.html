@@ -240,9 +240,14 @@
             </div>
         </main>
 
-        <footer>
-            &copy; 2026 Albert De Vries
+       <footer>
+            <p>Last modified: <span id="lastModified"></span></p>
         </footer>
     </div>
+    
+    <script>
+        // Display the last modified date
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
 </body>
 </html>
