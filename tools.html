@@ -418,11 +418,17 @@
         </div>
     </main>
 
-    <footer>
-        © 2026 Albert De Vries
-    </footer>
+       <footer>
+            <p>Last modified: <span id="lastModified"></span></p>
+        </footer>
+        
     </div>
 
+    <script>
+        // Display the last modified date
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+    
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Search functionality
         const searchInput = document.getElementById('searchInput');
@@ -458,5 +464,6 @@
             }
         });
     </script>
+    
 </body>
 </html>
